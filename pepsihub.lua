@@ -1,8 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Player = game.Players.LocalPlayers
 local Window = OrionLib:MakeWindow({Name = "pepsi-hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-local game.PlaceId = PlaceId
-if placeId == 2753915549 or placeId == 4442272183 or placeId == 7449423635 then 
 
 -- notification
 OrionLib:MakeNotification({
@@ -94,65 +91,3 @@ local Section = MisTab:AddSection({
 local Section = SettingTab:AddSection({
 	Name = "Setting"
 })
-
--- main function
-    MainTab:AddDropdown({
-        Name = "Select",
-        Default = "1",
-        Options = {"Sword", "Melee","gun","Fruit"},
-        Callback = function(L)
-            print(L)
-        end    
-    })
-
--- raid function
-
--- Island function 
-
-	IslandTab:addButton("First Sea",function()
-		local args = {
-			[1] = "TravelMain" 
-		}
-		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-		end)
-	IslandTab:addButton("Second Sea",function()
-		local args = {
-			[1] = "TravelDressrosa" 
-		}
-		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-		end)
-	IslandTab:addButton("Third Sea", function()
-		local args = {
-			[1] = "TravelZou" 
-		}
-	
-		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-	end)
-
--- Start function 
-
--- Racev4 function 
-
--- Combat function 
-
--- Mis function
-
--- setting function 
-
-
-
-
-
-
-
-
-
-
-
-
-else
-    game.Players.LocalPlayers.kick("Not Support")
-end
-OrionLib:Init()
-
-
