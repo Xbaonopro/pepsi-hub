@@ -105,28 +105,47 @@ local Section = SettingTab:AddSection({
 -- raid function
 
 -- Island function 
-
-	IslandTab:addButton("First Sea",function()
+	IslandTab:AddButton({
+		Name = "First Sea",
+		Callback = function()
+				  print("button pressed")
 		local args = {
-			[1] = "TravelMain" 
+		[1] = "TravelDressrosa" 
 		}
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-		end)
 
-	IslandTab:addButton("Second Sea",function()
-		local args = {
-			[1] = "TravelDressrosa" 
-		}
-		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-		end)
-
-	IslandTab:addButton("Third Sea", function()
-		local args = {
-			[1] = "TravelZou" 
-		}
+		end    
+	})
 	
+	IslandTab:AddButton({
+		Name = "Second Sea",
+		Callback = function()
+				  print("button pressed")
+		local args = {
+		[1] = "TravelDressrosa" 
+		}
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-	end)
+		  
+		end    
+	})
+	
+	Tab:AddButton({
+		Name = "Third Sea",
+		Callback = function()
+				  print("button pressed")
+		local args = {
+		[1] = "TravelZou" 
+		}
+			
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+
+		end    
+	})
+	
+
+
+
+
 
 -- Start function 
 
