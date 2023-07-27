@@ -105,6 +105,9 @@ local Section = SettingTab:AddSection({
 -- raid function
 
 -- Island function 
+
+getgenv().TPPlace = "string"
+
 	IslandTab:AddButton({
 		Name = "First Sea",
 		Callback = function()
@@ -114,7 +117,17 @@ local Section = SettingTab:AddSection({
 		}
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 
-		end    
+		function(teleportPlace)
+			local Player = game.Players.LocalPlayer
+			Player.Charater.HumanoidRootPart.CFrame = teleportPlace
+			if PlaceId == 2753915549 then
+				Teleport(game:GetService("Worldspace").Map.Zone["1"]["1"].GasStation["1st gas station"].Part.CFrame)
+			else 
+				game.Players.LocalPlayer.kick("Not support place")
+			end
+			end
+		end
+		   
 	})
 	
 	IslandTab:AddButton({
@@ -125,7 +138,16 @@ local Section = SettingTab:AddSection({
 		[1] = "TravelDressrosa" 
 		}
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-		  
+
+		function(teleportPlace)
+			local Player = game.Players.LocalPlayer
+			Player.Charater.HumanoidRootPart.CFrame = teleportPlace
+			if PlaceId == 4442272183 then
+				Teleport(game:GetService("Worldspace").Map.Zone["1"]["1"].GasStation["1st gas station"].Part.CFrame)
+			else 
+				game.Players.LocalPlayer.kick("Not support place")
+			end
+			end 
 		end    
 	})
 	
@@ -139,6 +161,15 @@ local Section = SettingTab:AddSection({
 			
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 
+		function(teleportPlace)
+			local Player = game.Players.LocalPlayer
+			Player.Charater.HumanoidRootPart.CFrame = teleportPlace
+			if PlaceId == 7449423635 then
+				Teleport(game:GetService("Worldspace").Map.Zone["1"]["1"].GasStation["1st gas station"].Part.CFrame)
+			else 
+				game.Players.LocalPlayer.kick("Not support place")
+			end
+			end
 		end    
 	})
 	
